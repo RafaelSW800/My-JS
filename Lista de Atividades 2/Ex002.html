@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 02</title>
+</head>
+<body>
+    <h1>CADASTRO VEICULAR</h1>
+
+    <script>
+        var estrutura = [];
+
+        while(opcoes != 0){
+            var opcoes = Number(prompt("Escolha:\n1)Cadastrar\n2)Listar carros cadastrados\n3)Pesquisar carros cadastrados\n0)Sair"));
+            switch(opcoes){
+                case 1:
+                    estrutura.push(prompt("Digite a marca do carro a ser armazenado: "));
+                    estrutura.push(prompt("Digite o modelo: "));
+                    estrutura.push(prompt("Agora digite o ano: "));
+                break;
+                case 2:
+                    alert(estrutura);
+                break;
+                case 3:
+                    let pesquisa = prompt("Pesquisar carro: ");
+                    for(let i = 0; i < estrutura.length; i++);
+                        if(estrutura[i] === pesquisa){
+                            alert(i);
+                        }
+            }
+        }
+    </script>
+</body>
+</html>

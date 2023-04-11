@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE 4</title>
+</head>
+<body>
+    <script>
+//Variável
+        var iteracao = [];
+//Laço de repetição
+        while(opcao !== 0){
+            var opcao = Number(prompt('Escolha um item:\n1 - Adicionar\n2 - Remover\n 3 - Pesquisa\n4 - Exibir conjunto\n0 - sair'));
+//Permite a criação do menu
+            switch(opcao){
+                case 1:
+                    iteracao.push(prompt('Qual o valor a ser selecionado?'));
+                break;
+                case 2:
+                    iteracao.pop();
+                break;
+                case 3:
+                    let pesquisa = prompt("Qual o item procurado?");
+                for(let i = 0; i < iteracao.length; i++){
+                    if(iteracao[i] === pesquisa){
+                        alert("A palavra pesquisada encontra-se na posição"+i);
+                    }
+                }
+            break;
+            case 4:
+                alert(iteracao);
+            break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 6</title>
+  </head>
+  <body>
+    <script>
+        var chops = [];
+        let opcao;
+        let conta = 0;
+        var qtdChop = 0;
+
+        while(opcao != 0){
+            opcao = Number(prompt("Digite 1 para adicionar chop, 4 para remover, 9 para fechar a conta e 0 para sair."));
+            switch(opcao){
+                case 1:
+                    chops.push();
+                    conta += 9.9; 
+                    qtdChop++;
+                break;
+                case 4:
+                    qtChop = qtChop - 1;
+                    chops.pop();
+                break;
+                case 9:
+                    alert(`Quantidade consumida: ${qtdChop}.\nValor da conta: ${conta}.`);
+                case 0:
+                    conta = 0;
+                    qtdChop = 0;
+                break;
+            }
+        }
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 05</title>
+</head>
+<body>
+    <script>
+        function average(array) {
+            var sum = 0;
+            for (var i = 0; i < array.length; i++) {
+              sum += array[i];
+            }
+            return sum / array.length;
+          }
+          
+          function min(array) {
+            var min = array[0];
+            for (var i = 1; i < array.length; i++) {
+              if (array[i] < min) {
+                min = array[i];
+              }
+            }
+            return min;
+          }
+          
+          function max(array) {
+            var max = array[0];
+            for (var i = 1; i < array.length; i++) {
+              if (array[i] > max) {
+                max = array[i];
+              }
+            }
+            return max;
+          }
+          
+          var name = prompt("Atleta:");
+          
+          var scores = [];
+          
+          for (var i = 0; i < 7; i++) {
+            var score = parseFloat(prompt("Nota:"));
+
+            scores.push(score);
+          }
+          
+          var bestScore = max(scores);
+          var worstScore = min(scores);
+          
+          var indexBest = scores.indexOf(bestScore);
+          scores.splice(indexBest, 1);
+          var indexWorst = scores.indexOf(worstScore);
+          scores.splice(indexWorst, 1);
+          
+          var averageScore = average(scores);
+          
+          alert("Resultado:");
+          alert("Atleta: " + name);
+          alert("Melhor nota: " + bestScore);
+          alert("Pior nota: " + worstScore);
+          alert("Média: " + averageScore.toFixed(2));
+    </script>
+</body>
+</html>

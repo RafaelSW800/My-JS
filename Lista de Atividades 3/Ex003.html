@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 03</title>
+</head>
+<body>
+    <script>
+        var receptor = 0;
+        var opcoes;
+        
+        while(opcoes != 2){
+            opcoes = Number(prompt("Selecione a opção desejada:\n0)Finalizar compra\n1)Adicionar item.\n2)Sair"))
+            switch(opcoes){
+                case 1:
+                    var valor = Number(prompt("Valor do produto: "));
+                    receptor += valor;
+                break;
+                case 0:
+                    alert("Valor total: " + receptor);
+                    var cliente = Number(prompt("Qual o valor dado pelo cliente: "));
+                    if(cliente < receptor){
+                        alert('Quantia insuficiente');
+                        break;
+                    }
+                    var total = cliente - receptor;
+                    alert("Troco: " + total);
+
+                    total = 0;
+                    receptor = 0;
+                break;
+            }
+
+        }
+    </script>
+</body>
+</html>

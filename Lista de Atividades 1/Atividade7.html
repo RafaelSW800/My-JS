@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE 07</title>
+</head>
+<body>
+    <script>
+        let altura = Number(prompt("Digite sua altura: "));
+        let peso = Number(prompt("Agora digite seu peso: "));
+        let imc = peso / altura ** 2;
+        
+        alert(`Resultado: ${imc}. Segundo seus dados, você possui ${resultado()}.`);
+
+        function resultado(){
+            if(imc < 18.5){
+                return("Magreza. Grau de obseidade: 0");
+            }else if (imc >= 18.5 && imc <= 24.9){
+                return("Normal. Grau de obesidade: 0");
+            }else if(imc > 24.9 && imc <= 29.9){
+                return("Sobrepeso. Grau de obesidade: I");
+            }else if(imc > 29.9 && imc <= 39.9){
+                return("Obesidade. Grau de obesidade: II");
+            }else if(imc > 39.9){
+                return("Obesidade grave. Grau de obesidade: III");
+            }else{
+                return("Não entendi.");
+            }
+        }
+    </script>
+</body>
+</html>

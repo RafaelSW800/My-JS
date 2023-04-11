@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SEMINÁRIO ENG. SOFTWARE </title>
+    <link rel="stylesheet" href="seminario.css">
+</head>
+
+<body>
+    <header> <strong> SISTEMA DE NOTAS </strong> </header>
+    <section>
+        <strong> ALUNOS </strong> 
+        <div id="NomeAluno"> Nenhum aluno encontrado </div>
+    </section>
+    <section class="MediaAluno">
+        <strong>MÉDIAS</strong>
+        <div id="divMedia"> Nenhuma média encontrada </div>
+    </section>
+    <section class="resultado">
+        <strong> RESULTADO </strong> 
+        <div id="resultadoFinal"> Nenhum resultado encontrado </div>
+    </section>
+    <script>
+
+        //Variáveis
+        var DefMedia = 7.5; //Caso não seja selecionado manualmente a média durante o funcionamento do código, o valor padrão será 7.5
+        var alunos = [];
+        var medias = [];
+        let selecao;
+        var recebe = "";
+        var recebeMedia = "";
+        var recebeMediaFinal = "";
+        var texto = "";
+
+        //Laços de repetição
+        while(selecao != 0 && selecao != 3){
+            selecao = Number(prompt("O que você gostaria de fazer?\n1) Definir média;\n2) Adicionar aluno e média do aluno;\n3) Confirmar;\n0) Sair"));
+            switch(selecao){
+                case 1:
+                    DefMedia = Number(prompt("Defina a média da prova: "));
+                break;
+                case 2:
+                    alunos.push(prompt("Nome do aluno: "));
+                    medias.push(Number(prompt("Média do aluno: ")));
+                break;
+                case 3:
+                    //Laço que adiciona aluno por aluno de forma empilhada
+                    for(let resultado = 0; resultado < alunos.length; resultado++){
+                        recebe += alunos[resultado] + "<br>";
+                    }
+                    document.getElementById("NomeAluno").innerHTML = recebe;
+
+                    //Laço que adiciona as médias dos alunos de forma empilhada
+                    for(let resultadoMedia = 0; resultadoMedia < medias.length; resultadoMedia++){
+                        recebeMedia += medias[resultadoMedia] + "<br>";
+                    }
+                    document.getElementById("divMedia").innerHTML = recebeMedia;
+
+                    //Laço responsável por definir se o aluno foi aprovado ou reprovado
+                    for (let resultadoFinal = 0; resultadoFinal < medias.length; resultadoFinal++){
+                        if (medias[resultadoFinal] >= DefMedia){
+                            texto = "Aprovado";
+                            recebeMediaFinal += texto.fontcolor("green") + "<br>";
+                            document.getElementById("resultadoFinal").innerHTML;
+                        } else {
+                            texto = "Reprovado";
+                            recebeMediaFinal += texto.fontcolor("red") + "<br>";
+                            document.getElementById("resultadoFinal").innerHTML;
+                        }
+                    }
+                    document.getElementById("resultadoFinal").innerHTML = recebeMediaFinal;
+                break;
+                case 0:
+                    alunos = [];
+                    medias = [];
+                break;
+                default:
+                    alert("Comando inválido ou não reconhecido. Digite novamente");
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

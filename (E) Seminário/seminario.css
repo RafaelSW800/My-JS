@@ -1,0 +1,89 @@
+/*Área de título*/
+header{
+
+    /*Fonte*/
+    color: white;
+    font-family: Arial, Helvetica, sans-serif 20px;
+    font-size: 25pt;
+    text-align: center;
+    
+    /*Alinhamento e dimensões*/
+    height: 30pt;
+    margin: auto;
+    width: 300pt;
+
+    /*Cores e visual*/
+    background-color: rgba(26, 25, 25, 0.525);
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 1px black;
+}
+
+/*Plano de fundo*/
+body{
+    background-attachment: fixed;
+    background-image: url('aurora.jpg');
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+/*Estrutura responsável pela visualização da listagem dos alunos*/
+section{
+
+    /*Fonte*/
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif 10pt;
+    text-align: center;
+
+    /*Alinhamento e dimensões*/
+    margin-left: 27rem;
+    margin-top: 30px;
+    height: 30rem;
+    width: 150px;
+
+    /*Cores e visual*/
+    background-color: rgba(26, 25, 25, 0.434);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 2px 10px black;   
+}
+
+/*Estrutura responsável pela visualização da listagem das médias*/
+section.MediaAluno{
+
+    /*Fonte*/ 
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif 10pt;
+    text-align: center; 
+
+    /*Alinhamento e dimensões*/
+    height: 30rem;
+    left: 15rem;
+    margin-top: -359pt;
+    position: relative;
+    width: 150px;
+    
+     /*Cores e visual*/
+    background-color: rgba(26, 25, 25, 0.434);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 2px 10px black;
+}
+
+/*Estrutura responsável pela visualização da listagem dos resultados de aprovação ou não aprovação*/
+section.resultado{
+
+    /*Fonte*/
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif 12pt;
+    text-align: center;
+    
+    /*Alinhamento e dimensões*/
+    height: 30rem;
+    left: 30rem;
+    margin-top: -359pt;
+    position: relative;
+    width: 150px;
+    
+    /*Cores e visual*/
+    background-color: rgba(26, 25, 25, 0.434);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 2px 10px black;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 04</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+
+        function maiorValor(arr){
+            return Math.max(... arr);
+        }
+        
+        for(let i = 0; i < 5; i++){
+            var incluir = Number(prompt(`Digite o número ${i + 1}: `));
+            arr.push(incluir);
+        }
+        alert(`Maior valor: ${maiorValor(arr)}`);
+
+    </script>
+</body>
+</html>

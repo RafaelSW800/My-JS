@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 01</title>
+</head>
+<body>
+    <script>
+        var temperatura = [];
+        var maxima;
+        var minima;
+  
+        while(scanner !== 0){
+            var scanner = Number(prompt("Digite 1 para adicionar uma temperatura em graus Celsius ou digite 0 para sair. "));
+            switch(scanner){
+                case 1:
+                    temperatura.push(prompt('Quantos graus? '));
+                    maxima = Math.max(... temperatura);
+                    minima = Math.min(... temperatura);
+                break;
+                case 0:
+                    alert("Temperatura máxima: " + maxima);
+                    alert("Temperatura mínima: " + minima);
+                break;
+                default:
+                    alert('Comando inválido');
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

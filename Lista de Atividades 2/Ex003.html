@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 03</title>
+</head>
+<body>
+    <script>
+        alert('Neste programa você poderá pesquisar nomes, e serão contadas quantas vezes você digitou nomes com a inicial "A"');
+        var nome = prompt("Digite um nome ou escreva 'sair' para encerrar o programa: ");
+        var contador = 0;
+
+        while(nome != "sair"){
+            if(nome.charAt(0) == 'A') {
+                contador++;
+            }
+            nome = prompt('Digite um nome ou escreva "sair" para encerrar o programa: ');
+        }
+        alert('Números de nomes com a inicial "A" digitados: ' + contador);
+    </script>
+</body>
+</html>

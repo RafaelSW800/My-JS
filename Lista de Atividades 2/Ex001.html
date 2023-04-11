@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 01</title>
+</head>
+<body>
+    <h1>SISTEMA DE LOGIN</h1>
+
+    <script>
+        const senha = "por favor";
+        let tentativas = 0;
+
+        for (let i = 0; i < 4; i++) {
+            let entrada = prompt("Digite a senha: ");
+            if(entrada === senha){
+                alert("Liberado");
+                break;
+            } else {
+                tentativas++;
+                alert(`Senha incorreta. Você possui mais ${4 - tentativas} tentativas antes que o sistema seja bloqueado.`);
+            }
+        }
+            if (tentativas === 4) {
+                alert("Acesso negado.");
+            }
+    </script>
+</body>
+</html>

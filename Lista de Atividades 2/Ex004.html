@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 04</title>
+</head>
+<body>
+    <script>
+        let info = [];
+       
+        while(escolha != 0){
+            var escolha = Number(prompt("0)Sair\n1)Adicionar\n2)Mostrar itens armazenados\n9)Remover o último registro"));
+            switch(escolha){
+                case 1:
+                    info.push(prompt("Digite alguma informação que queira armazenar: "));
+                break
+                case 2:
+                    alert(info);
+                break;  
+                case 9:
+                    info.pop();
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

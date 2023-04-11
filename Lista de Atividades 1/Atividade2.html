@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATIVIDADE 02</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+    //Variáveis
+    var sequencia = [];
+    var resto = 0;
+    var repeticao = 0;
+    var primos = ' ';
+    repeticao = parseInt(prompt("Digite o tamanho da sua sequência: "));
+
+    //Laço de repetição
+    for(let i = 0; i < repeticao; i++){
+      //Adiciona valores a estrutura
+      sequencia.push(parseInt(prompt('Digite o valor n" '+(i+1))));
+    }
+    //Realiza o cálculo que define os números primos
+    for(let i = 0; i < sequencia.length; i++){
+      resto = 1;
+      if(sequencia[i] !== 0 && sequencia[i] !== 1){
+        for(let x = 0; x < 1; x++){
+          if(sequencia[i] % sequencia[x] === 0){
+            resto =+ 1;
+          }else{
+            resto += 0;
+          }
+        } if(resto == 2){
+          primos += '\n' + sequencia[i];
+        }
+      }
+    }
+    //Demonstração do resultado
+    alert("os números primos: \n" + primos);
+  </script>
+</body>
+</html>

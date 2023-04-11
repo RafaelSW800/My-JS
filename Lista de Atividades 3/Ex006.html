@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 06</title>
+</head>
+<body>
+    <script>
+        function positivo(n) {
+            var floatN = parseFloat(n);
+            return !isNaN(floatN) && isFinite(n) && floatN > 0 && floatN % 1 == 0;
+          }
+          function reverso(n) {
+            var reverso1 = 0;
+            while (n > 0) {
+              reverso1 = reverso1 * 10 + n % 10;
+              n = Math.floor(n / 10);
+            }
+            return reverso1;
+          }
+          var input = prompt("Digite um número.");
+          
+          if (positivo(input)) {
+            var invertido = reverso(input);
+            alert("Invertido: " + invertido);
+          } else {
+            alert("Este não é um número inteiro. Digite novamente.");
+          }
+    </script>
+</body>
+</html>

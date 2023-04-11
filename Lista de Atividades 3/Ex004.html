@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO 04</title>
+</head>
+<body>
+    <script>
+var gabarito = ["A", "B", "C", "D", "E", "E", "D", "C", "B", "A"];
+var respostas = []; 
+var acertos = []; 
+var notas = []; 
+var total = 0;
+var maior = 0;
+var menor = 10;
+var media = 0; 
+ 
+
+function verificarNota() {
+
+  for (var i = 0; i < 10; i++) {
+    var resposta = prompt("Qual é a resposta da questão " + (i + 1) + "?");
+    respostas.push(resposta);
+  }
+  var acerto = 0;
+
+  for (var j = 0; j < respostas.length; j++) {
+    if (respostas[j] == gabarito[j]) {
+
+      acerto++;
+    }
+  }
+  acertos.push(acerto);
+  var nota = acerto;
+  notas.push(nota);
+}
+
+function mostrarResultados() {
+
+  for (var k = 0; k < notas.length; k++) {
+    total++; 
+    if (notas[k] > maior) {
+
+      maior = notas[k];
+    }
+    if (notas[k] < menor) {
+  
+      menor = notas[k];
+    }
+    media += notas[k]; 
+  }
+  media /= total; 
+
+  alert("Maior número de acertos: " + maior);
+  alert("Menor número de acertos: " + menor);
+  alert("Total de Alunos que utilizaram o sistema: " + total);
+  alert("Média da Turma: " + media.toFixed(2));
+}
+do {
+  verificarNota(); 
+  var continuar = confirm("Outro aluno vai utilizar o sistema?"); 
+} while (continuar == true); 
+
+mostrarResultados();
+    </script>
+</body>
+</html>

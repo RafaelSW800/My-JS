@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE 06</title>
+</head>
+<body>
+    <SCRIpt>
+//Variáveis
+        var nome = [];
+        var camiseta = [];
+        var cor = [];
+        var retorno = '';
+
+//Laço de repetição
+        while(operacao !== 0){
+            var operacao = prompt('Selecionar:\n1 - Cadastrar\n2 - Remover último item cadastrado\n3 - Pesquisar\n0 - sair');
+
+//Menu para interação com o usúario
+            switch(operacao){
+                case 1:
+                    nome.push(prompt('Digite o nome: '));
+                    camiseta.push(prompt('Digite o tamanho da camiseta: '));
+                    cor.push(prompt('Digite a cor desejada para a camiseta: '));
+                break;
+                case 2:
+                    nome.pop();
+                    camiseta.pop();
+                    cor.pop();
+                break;
+                case 3:
+                    let pesquisa = prompt('Pesquisar: ');
+                    for(let i = 0; i < nome.length; i++){
+                        if(nome[i] === pesquisa ││ cor[i] === pesquisa){
+                            retorno += nome[i] + ' ' + tamanho[i]+' '+cor[i];
+                        }
+                    }
+                alert(retorno);
+                break;
+            }
+        }
+    </SCRIpt>
+</body>
+</html>

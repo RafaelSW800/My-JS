@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE 08</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        h1{
+            color: crimson;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 08 de Engenharia de Software</h1>
+    <script>
+        //VARIÁVEIS
+        var idade = Number(prompt("Digite sua idade: "));
+        var futuro = idade + 5;
+
+        alert(`Você possui ${idade} anos, sendo portando ${MaiorOuMenor()}. Daqui 5 anos você terá ${futuro} anos de idade. `);
+
+        function MaiorOuMenor(){
+            if(idade >= 18){
+                return("maior de idade");
+            }else{
+                return("menor de idade");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,2 +1,2 @@
 # My-JS
-Some JS exercising
+Exercícios diversos feitos em sala de aula com o uso de HTML, JavaScript e CSS.
